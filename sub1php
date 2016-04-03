@@ -13,9 +13,19 @@
 echo "Hello world!<br>";
 $name=$_POST['name'];
 $email=$_POST['email'];
+$ip=$_SERVER['REMOTE_ADDR'];
+$ly="{$name}##{$email}##{$ip}@@@";
 echo "your name is {$name}"."<br>";
 echo "your email is {$email} <br>";
+ceho "your ip is {$ip}";
 print ('感谢!');
+if(file_exists("ly.txt") {
+$info=file_get_contents("ly.txt")
+file_put_contents("ly.txt",$info.$ly);
+echo "已成功加进留言本";
+} else {
+file_put_contents("ly.txt",$ly);
+echo "已成功留言新建留言本";
 ?>
 </body>
 </html>
