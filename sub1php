@@ -17,15 +17,16 @@ $ip=$_SERVER['REMOTE_ADDR'];
 $ly="{$name}##{$email}##{$ip}@@@";
 echo "your name is {$name}"."<br>";
 echo "your email is {$email} <br>";
-echo "your ip is {$ip}";
+echo "your ip is {$ip}<br>";
 print ('感谢!');
-if(file_exists("ly.txt") {
+if(file_exists("ly.txt") == true){
 $info=file_get_contents("ly.txt");
 file_put_contents("ly.txt",$info.$ly);
 echo "已成功加进留言本";
 } else {
 file_put_contents("ly.txt",$ly);
-echo "已成功留言新建留言本";
+$info=file_get_contents("ly.txt");
+echo "已成功留言新建留言本:{$info}";
 }
 ?>
 </div>
