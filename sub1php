@@ -20,7 +20,7 @@ echo "your email is {$email} <br>";
 echo "your ip is {$ip}";
 print ('感谢!');
 if(file_exists("ly.txt") {
-$info=file_get_contents("ly.txt")
+$info=file_get_contents("ly.txt");
 file_put_contents("ly.txt",$info.$ly);
 echo "已成功加进留言本";
 } else {
