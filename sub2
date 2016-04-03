@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>hello word</title>
+<link rel="stylesheet" href="lyb.css" type="text/css"></link>
+</head>
+<body>
+<div id="luiyanben">
+<h2>留言本</h2>
+<a href="#">查看留言</a>
+<a href="#">删除留言</a>
+<br>
+<?php
+echo "Hello world!<br>";
+$name=$_POST['name'];
+$email=$_POST['email'];
+$ip=$_SERVER['REMOTE_ADDR'];
+$ly="{$name}##{$email}##{$ip}@@@";
+echo "your name is {$name}"."<br>";
+echo "your email is {$email} <br>";
+echo "your ip is {$ip}<br>";
+print ('感谢!');
+$con = mysql_connect("localhost","root","abc123");
+if (!$con)
+  {
+  die('Could not connect: ' . mysql_error());
+  }
+
+// some code
+
+mysql_close($con);
+}
+?>
+</div>
+</body>
+</html>
